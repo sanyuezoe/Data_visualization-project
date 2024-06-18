@@ -1,0 +1,117 @@
+body {
+    font-family: "Antic Didone", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
+}
+
+.cover {
+    height: 100vh;
+    background-image: url(/Website/hongkong_protests_photo.webp);
+    background-size: cover;
+    color:#fff;
+  }
+
+.cover::before {
+    content: "";
+    position: absolute;
+    top: -1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(173, 173, 173, 0.5); /* Adjust the color and transparency */
+    z-index: 1;
+}
+
+.title {
+    padding: 4em 5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header sidebar"
+      ". footer footer";
+  }
+
+.title h1 {
+    margin-top: 250px;
+    font-weight: bolder;
+    font-size: 60px;
+    grid-area: header;
+    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+  }
+
+.title h3 {
+    grid-area: footer;
+    padding-top: 20px;
+    text-shadow: 1px 3px 0 #1f1f1f, 1px 5px 5px #aba8a8;
+  }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+section {
+    margin:1rem;
+    margin-bottom: 2rem;
+}
+
+section h2{
+    text-align: center;
+}
+
+#data h3{
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.chart p{
+    margin:2rem;
+}
+
+.chart img{
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non ho niente da dire</title>
+    <link rel="stylesheet" href="/Website/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#">HOME</a>
+        <a href="#introduction">INTRODUCTION</a>
+        <a href="#data">DATA</a>
+        <a href="#visualization">VISUALIZATION</a>
+    </nav>
+</header>
+
+<main>
+  <div class="cover">
+    <div class="title">
+        <h1>Non Ho Niente Da Dire</h1>
+        <h3 class="sub_title">
+            A Data Visualization Project about Hong Kong protests against Extradition Bill
+        </h3>
+    </div>
+  </div >
+  <section id="introduction">
+      <h2>Introduction</h2>
+      <p>This project explores the Hong Kong Extradition Protests that began on March 15, 2019, 
+        against a proposed amendment to the Fugitive Offenders Ordinance, allowing extradition to mainland China.</p>
+      <p>It aims to provide a detailed analysis of the Protests, discovering their unique features and shows the connection among them. </p>
+  </section>
+  
+  <section id="data">
+      <h2>Data Overview</h2>
+      <p>The project  relies on two main datasets: </p>
+      <p><b>ACLED Dataset</b>: This dataset includes detailed records of protest events in Hong Kong from March 15, 2019, to June 30, 2020.</p>
+      <p><b>LOD Dataset</b>: This dataset provides additional context and data related to specific protest events in Hong Kong.</p>
+      <h3>ACLED Dataset Preview</h3>
+      <table id="acled-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Sub Type</th>
+                <th>Location</th>
+                <th>Participants</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Related to Extradition Protests</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <h3>Wikidata Dataset Preview</h3>
+      <table id="wiki-table">
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Predicate</th>
+                <th>Object</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+  </section>
+  
+  <section id="visualization">
+      <h2>Visualizations</h2>
+      <p>Since I need to compare events related to Extradition Protests to those are not, bar chart is a good choice to do it. 
+        It is easy to see the different values of different categories.
+      </p>
+      <div class="chart">
+          <img src="/Viz/bar_chart_comparison_types.png" alt="bar chart for compare types">
+          <p><b>Description</b>: This bar chart compares the event types of two categories, we can see <u>Protests</u> are common in both related and non-related contexts, with 414 and 486. 
+            In contrast, <u>Riots</u> are more frequent in events related to the movement, with 189 compared to just 25 in non-related events.
+          </p>
+      </div>
+      <div class="chart">
+        <img src="/Viz/bar_chart_comparison_sub_types.png" alt="bar chart for compare subtypes">
+        <p><b>Description</b>: This bar chart compares the sub-event types of two categories, The most common sub-event type is <u>Peaceful protests</u>,  with 368 related to movement and 474 not related. 
+          In contrast, <u>Violent Demonstation</u> has 189 events related to and only 25 not related. In <u>protests with intervention</u>, it occurs more frequently in related events, with 43 occurrences compared to 11 in non related events.
+          <u>Excessive Force Against Protesters</u> are relatively rare.
+        </p>
+        <p class="result"><b>Result:</b>
+          <ol>
+            <li>Events related to the movement tend to have a higher incidence of violent and intervention-related sub-events compared to those not related to the movement.</li>
+            <li>The relatively higher number of protests with intervention in related events suggests a greater involvement of law enforcement in these contexts.</li>
+            <li>While peaceful protests are common in both contexts, violent demonstrations and riots are more strongly associated with events related to the movement.</li>
+          </ol>
+          </p>
+      </div>
+      <div class="chart">
+        <img src="/Viz/Temporal_record_of_protests_2019-2020_Hong_Kong.png" alt="temporal graph for compare">
+        <p><b>Description</b>: This line chart provides a timeline of protests in Hong Kong, to distinguish between protests related to the movement and those are not.
+        The x-axis is the date, from 2019 March to 2020 June</p>
+        <p>From the chart, we can see the protests for both types have a low acount and have an increase around mid 2019. The protests activites related the movement increasing a lot from that period.
+          The blue line reaches the highest peak around 2019 November, with more than 60 protests events.After that, the number of both types starts to decline but the orange line shows more consistent.
+        </p>
+        <p class="result"><b>Result:</b>
+          <ol>
+            <li>There is a significant impact of the movement during the late 2019 about the movement.</li>
+            <li>Non related events are more consistent but less tense.</li>
+      </div>
+      <div class="chart">
+        <img src="/Viz/hk_protests_numbers_map.png" alt="map graph for numbers of protests">
+        <p><b>Description</b>: This map represents the geographic distribution and concentration of protest events across various districts in Hong Kong. 
+          Each district is shaded according to the number of protests, with a gradient color scale indicating the intensity from lighter to darker shades.</p>
+        <p>The district of <u>Yau Tsim Mong</u> has the highest concentration of protests, making it the primary hotspot for protest activities in Hong Kong.
+          <u>Kwun Tong, Wan Chai and Sha Tin </u>also show a high number of protests. 
+        </p>
+        <p class="result"><b>Result:</b>The geographic distribution of protests in Hong Kong reveals that protests are most heavily concentrated in the districts of Yau Tsim Mong, 
+          Kwun Tong, Wan Chai, Sha Tin, and Eastern. Yau Tsim Mong, in particular, stands out as the primary hub of protest activities.</p>
+
+
+      </div>
+      <div class="chart">
+        <img src="/Viz/connections_graph.png" alt="connection graph">
+        <p><b>Description</b>: This is a network graph titled"Connections between Events and Related Entities in the 2019-2020 Hong Kong Protests'
+          visualizes the relationships between various events and entities associated with the Hong Kong extradition protests.
+          Nodes represent events and entities, and lines indicate connections between them.</p>
+        <p>The graph focuses on few key events and entities that have significant impact.</p>
+        <p class="result"><b>Result:</b>he network graph reveals that the 2019 Hong Kong Anti-Extradition Bill Protests were a complex series of events. 
+          Major protest dates such as 31 March, 28 April, 9 June, 16 June, 1 July, 21 July, 4 August, 11 August, 26 July, and 30 July were significant milestones in the movement.</p>
+      </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2024 Zhao Ying</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<script src="/Website/script.js"></script>
+</body>
+</html>
